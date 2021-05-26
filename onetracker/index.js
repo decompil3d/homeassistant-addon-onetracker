@@ -12,7 +12,9 @@ const buildHome = handlebars.compile(templateSrc);
 const app = express();
 app.use((req, res, next) => {
   if (req.ip !== '172.30.32.2') {
-    res.status(403).json({ error: `Forbidden ingress IP '${req.ip}'. Must call from 172.30.32.2` });
+    const error = `Forbidden ingress IP '${req.ip}'. Must call from 172.30.32.2`;
+    console.error(error);
+    res.status(403).json({ error });
   } else {
     next();
   }
@@ -26,6 +28,7 @@ app.get('/', async (req, res) => {
     });
     res.send(html);
   } catch (err) {
+    console.error(err.message);
     res.status(500).json({ error: err.message });
     return;
   }
