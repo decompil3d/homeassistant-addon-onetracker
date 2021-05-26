@@ -1,18 +1,12 @@
 {
   "slug": "onetracker",
   "name": "OneTracker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "url": "https://github.com/decompil3d/homeassistant-addon-onetracker",
   "stage": "experimental",
   "description": "Add a HomeAssistant panel with package shipment tracking from your [OneTracker](https://onetracker.app) account",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-  "webui": "[PROTO:option_name]://[HOST]:[PORT:8000]/dashboard",
-  "ports": {
-    "8000/tcp": 8000
-  },
-  "ports_description": {
-    "8000/tcp": "Dashboard server"
-  },
+  "ingress": true,
   "options": {
   	"email": "OneTracker username (email address)",
     "password": "OneTracker password"

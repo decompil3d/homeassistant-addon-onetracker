@@ -15,4 +15,6 @@ RUN cd / && npm install --unsafe-perm
 COPY run.sh /
 RUN chmod a+x /run.sh
 
+EXPOSE 8099
+
 CMD [ "/run.sh" ]

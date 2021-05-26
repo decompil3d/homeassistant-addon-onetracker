@@ -10,6 +10,13 @@ const templateSrc = fs.readFileSync(path.join(__dirname, 'home.hbs'), 'utf8');
 const buildHome = handlebars.compile(templateSrc);
 
 const app = express();
+app.use((req, res, next) => {
+  if (req.ip !== '172.30.32.2') {
+    res.status(403).json({ error: `Forbidden ingress IP '${req.ip}'. Must call from 172.30.32.2` });
+  } else {
+    next();
+  }
+});
 app.get('/', async (req, res) => {
   try {
     const parcelsRaw = await getParcels();
@@ -25,8 +32,8 @@ app.get('/', async (req, res) => {
 });
 
 console.log('Starting OneTracker addon...');
-app.listen(8000, () => {
-  console.log('OneTracker addon is running on port 8000');
+app.listen(8099, () => {
+  console.log('OneTracker addon is running on port 8099');
 });
 
 /**
