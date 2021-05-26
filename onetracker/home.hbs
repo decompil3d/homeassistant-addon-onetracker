@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneTracker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+<body class="container-fluid bg-dark">
+  <table class="table table-striped table-hover table-dark">
+    <thead>
+      <tr>
+        <th class="p-2">Description</th>
+        <th class="p-2">Track</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each parcels}}
+        <tr>
+          <td class="p-2 py-1 border-0 border-start border-4 {{rowClass}}">
+            {{#if description}}{{description}}{{else}}{{tracking_id}}{{/if}}<br />
+            <span class="text-muted">{{tracking_status_readable}} via {{carrier}}</span>
+          </td>
+          <td class="align-top p-2 py-1"><a href="{{trackingUrl}}" rel="noopener noreferrer" target="_blank">track</a></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</body>
+</html>

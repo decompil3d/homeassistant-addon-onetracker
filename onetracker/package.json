@@ -1,0 +1,35 @@
+{
+  "name": "homeassistant-addon-onetracker",
+  "version": "1.0.0",
+  "description": "HomeAssistant Addon that shows tracked package shipments from OneTracker",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon -e 'js hbs'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decompil3d/homeassistant-addon-onetracker.git"
+  },
+  "keywords": [
+    "homeassistant",
+    "hass",
+    "addon",
+    "onetracker"
+  ],
+  "author": "Jonathan Keslin <github@jonathankeslin.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/decompil3d/homeassistant-addon-onetracker/issues"
+  },
+  "homepage": "https://github.com/decompil3d/homeassistant-addon-onetracker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.10",
+    "nodemon": "^2.0.7"
+  }
+}
