@@ -11,7 +11,7 @@ const buildHome = handlebars.compile(templateSrc);
 
 const app = express();
 app.use((req, res, next) => {
-  if (req.ip !== '172.30.32.2') {
+  if (!req.ip.endsWith('172.30.32.2')) {
     const error = `Forbidden ingress IP '${req.ip}'. Must call from 172.30.32.2`;
     console.error(error);
     res.status(403).json({ error });
