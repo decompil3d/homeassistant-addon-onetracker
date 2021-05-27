@@ -1,12 +1,14 @@
 {
   "slug": "onetracker",
   "name": "OneTracker",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "url": "https://github.com/decompil3d/homeassistant-addon-onetracker",
   "stage": "experimental",
   "description": "Add a HomeAssistant panel with package shipment tracking from your [OneTracker](https://onetracker.app) account",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "ingress": true,
+  "panel_title": "Package tracking",
+  "panel_icon": "mdi:package",
   "options": {
   	"email": "OneTracker username (email address)",
     "password": "OneTracker password"
