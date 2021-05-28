@@ -6,6 +6,7 @@
   "stage": "experimental",
   "description": "Add a HomeAssistant panel with package shipment tracking from your [OneTracker](https://onetracker.app) account",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "image": "decompil3d/image-{arch}-homeassistant-addon-onetracker",
   "ingress": true,
   "panel_title": "Package tracking",
   "panel_icon": "mdi:package",
