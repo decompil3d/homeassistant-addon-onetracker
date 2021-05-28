@@ -22,4 +22,5 @@ jobs:
           args: |
             --all \
             --target onetracker \
+            --image "image-{arch}-homeassistant-addon-onetracker" \
             --docker-hub decompil3d
