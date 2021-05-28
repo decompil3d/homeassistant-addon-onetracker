@@ -1,7 +1,7 @@
 {
   "slug": "onetracker",
   "name": "OneTracker",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "url": "https://github.com/decompil3d/homeassistant-addon-onetracker",
   "stage": "experimental",
   "description": "Add a HomeAssistant panel with package shipment tracking from your [OneTracker](https://onetracker.app) account",
