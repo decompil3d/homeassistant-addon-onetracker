@@ -24,9 +24,11 @@
   },
   "homepage": "https://github.com/decompil3d/homeassistant-addon-onetracker#readme",
   "dependencies": {
+    "cron": "^2.0.0",
     "express": "^4.17.1",
     "handlebars": "^4.7.7",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "node-graceful": "^3.1.0"
   },
   "devDependencies": {
     "@types/node-fetch": "^2.5.10",
