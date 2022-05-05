@@ -56,7 +56,34 @@ app.get('/', async (req, res) => {
 /**
  * @type {Auth}
  */
- let auth;
+let auth;
+
+/**
+ * @type {string}
+ */
+let addonSlug;
+
+/**
+ * Get the slug of this addon
+ *
+ * @returns {Promise<string>} The slug of this addon
+ */
+async function getAddonSlug() {
+  if (addonSlug) return addonSlug;
+  const res = await fetch('http://supervisor/addons/self/info', {
+    headers: {
+      'Authorization': `Bearer ${process.env.SUPERVISOR_TOKEN}`
+    },
+    method: 'GET'
+  });
+  if (!res.ok) {
+    throw new Error('Could not load addons from Supervisor API');
+  }
+
+  const { data: addon } = await res.json();
+  addonSlug = addon.slug;
+  return addonSlug;
+}
 
 /**
  * Update the HA entity representing the count of actively tracked packages
@@ -64,6 +91,7 @@ app.get('/', async (req, res) => {
 async function updateEntity() {
   const parcels = await getParcels();
   const deliveredCount = parcels.filter(p => p.tracking_status === 'delivered').length;
+  const slug = await getAddonSlug();
   await fetch(`http://supervisor/core/api/states/sensor.${process.env.ENTITY_NAME}`, {
     headers: {
       'Authorization': `Bearer ${process.env.SUPERVISOR_TOKEN}`,
@@ -73,7 +101,8 @@ async function updateEntity() {
     body: JSON.stringify({
       state: parcels.length - deliveredCount,
       attributes: {
-        delivered: deliveredCount
+        delivered: deliveredCount,
+        slug
       }
     })
   })
