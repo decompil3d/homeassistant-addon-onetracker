@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.1] - 2024-12-23
+
+### Fixed
+
+- Fix error `s6-overlay-suexec: fatal: can only run as pid 1`
+
 ## [1.2.0] - 2024-12-23
 
 ### Added
