@@ -1,6 +1,6 @@
 slug: onetracker
 name: OneTracker
-version: 1.1.0
+version: 1.2.0
 url: https://github.com/decompil3d/homeassistant-addon-onetracker
 stage: experimental
 description:
@@ -23,8 +23,10 @@ options:
   password: null
   entity_name: onetracker_package_count
   entity_cron: "*/15 7-23 * * *"
+  highlight_returns: false
 schema:
   email: str
   password: password
   entity_name: str?
   entity_cron: str?
+  highlight_returns: bool

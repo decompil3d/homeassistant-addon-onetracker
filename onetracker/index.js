@@ -233,6 +233,11 @@ function extendParcels(parcels) {
         rowClass = 'border-danger';
         break;
     }
+    // Intentional == since env var is a boolean but likely a string from env
+    if (process.env.HIGHLIGHT_RETURNS == 'true' && p.description?.includes('return')) {
+      // Returns get a different color
+      rowClass = 'border-warning-subtle';
+    }
     return {
       ...p,
       rowClass,

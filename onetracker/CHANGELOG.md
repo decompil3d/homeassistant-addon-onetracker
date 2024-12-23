@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0] - 2024-12-23
+
+### Added
+
+- Option to highlight parcels containing "return" in their description (to distinguish them from incoming parcels)
+
 ## [1.1.0] - 2022-05-05
 
 ### Added

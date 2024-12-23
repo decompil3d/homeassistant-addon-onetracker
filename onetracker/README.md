@@ -10,6 +10,7 @@ HomeAssistant Addon that shows tracked package shipments from OneTracker
 | **password** | - | Password to login to OneTracker |
 | entity_name | `onetracker_package_count` | Name of the sensor entity for package count |
 | entity_cron | `*/15 7-23 * * *` | Cron schedule to fetch package count for sensor |
+| highlight_returns | false | Whether to distinguish parcels containing "return" in their description |
 
 ## Customizing entity
 
