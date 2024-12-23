@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.2] - 2024-12-23
+
+### Fixed
+
+- Adjust warning highlight color
+
 ## [1.2.1] - 2024-12-23
 
 ### Fixed
