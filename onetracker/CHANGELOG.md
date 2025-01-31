@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.0] - 2025-01-31
+
+### Added
+
+- `/parcels` route to get packages as JSON
+
 ## [1.2.2] - 2024-12-23
 
 ### Fixed
