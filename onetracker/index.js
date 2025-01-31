@@ -33,8 +33,7 @@ app.use((req, res, next) => {
 });
 app.get('/', async (req, res) => {
   try {
-    const parcelsRaw = await getParcels();
-    const parcels = extendParcels(parcelsRaw);
+    const parcels = await getExtendedParcels();
     const html = buildHome({
       parcels
     });
@@ -45,6 +44,22 @@ app.get('/', async (req, res) => {
     return;
   }
 });
+
+app.get('/parcels', async (req, res) => {
+  try {
+    const parcels = await getExtendedParcels();
+    res.json(parcels);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).json({ error: err.message });
+    return;
+  }
+});
+
+async function getExtendedParcels() {
+  const parcelsRaw = await getParcels();
+  return extendParcels(parcelsRaw);
+}
 
 /**
  * @typedef {{
