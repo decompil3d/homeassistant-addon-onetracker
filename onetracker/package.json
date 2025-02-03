@@ -1,6 +1,6 @@
 {
   "name": "homeassistant-addon-onetracker",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "HomeAssistant Addon that shows tracked package shipments from OneTracker",
   "main": "index.js",
   "scripts": {
