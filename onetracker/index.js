@@ -52,7 +52,7 @@ app.get('/parcels', async (req, res) => {
       count: parcels.length,
       parcels
     };
-    res.json(parcels);
+    res.json(response);
   } catch (err) {
     console.error(err.message);
     res.status(500).json({ error: err.message });

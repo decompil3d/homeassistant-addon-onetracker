@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.4] - 2025-02-03
+
+### Fixed
+
+- Actually return the response object 🤦
+
 ## [1.3.3] - 2025-02-03
 
 ### Fixed
