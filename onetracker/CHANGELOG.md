@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.3] - 2025-02-03
+
+### Fixed
+
+- Adjust `/parcels` response format so that parcels list can be loaded into an attribute instead of raw state on a REST sensor
+
 ## [1.3.2] - 2025-02-03
 
 ### Fixed
