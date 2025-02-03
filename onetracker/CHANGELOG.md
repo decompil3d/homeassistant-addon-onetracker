@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.2] - 2025-02-03
+
+### Fixed
+
+- Allow calls from localhost IPs (`127.0.0.1`, `::1`)
+
 ## [1.3.1] - 2025-02-03
 
 ### Fixed
