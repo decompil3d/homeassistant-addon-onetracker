@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.3.1] - 2025-02-03
+
+### Fixed
+
+- Run add-on on the host network to (hopefully) allow ingress to `/parcels` route
+
 ## [1.3.0] - 2025-01-31
 
 ### Added
