@@ -48,6 +48,10 @@ app.get('/', async (req, res) => {
 app.get('/parcels', async (req, res) => {
   try {
     const parcels = await getExtendedParcels();
+    const response = {
+      count: parcels.length,
+      parcels
+    };
     res.json(parcels);
   } catch (err) {
     console.error(err.message);
